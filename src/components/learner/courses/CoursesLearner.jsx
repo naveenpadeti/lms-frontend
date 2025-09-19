@@ -26,12 +26,12 @@ const CoursesLearner = () => {
             setIsLoading(true);
             try {
                 // Fetch all available courses
-                const allCoursesResponse = await axios.get('http://localhost:8080/api/course/getAllCourses', {
+                const allCoursesResponse = await axios.get('http://localhost:8082/api/course/getAllCourses', {
                     headers: { "Authorization": "Bearer " + token }
                 });
 
                 // Fetch enrolled courses for this learner
-                const enrolledCoursesResponse = await axios.get('http://localhost:8080/api/learner/courses', {
+                const enrolledCoursesResponse = await axios.get('http://localhost:8082/api/learner/courses', {
                     headers: { "Authorization": "Bearer " + token }
                 });
 
