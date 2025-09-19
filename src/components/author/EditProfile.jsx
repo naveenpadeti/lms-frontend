@@ -22,7 +22,7 @@ const EditProfile = () => {
     useEffect(() => {
         const getAuthor = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/author/get", {
+                const response = await axios.get("http://localhost:8082/api/author/get", {
                     headers: { 'Authorization': "Bearer " + localStorage.getItem('token') }
                 })
 
