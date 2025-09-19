@@ -8,7 +8,7 @@ const EditProfile = () => {
         const formData = new FormData();
         formData.append("file", profile)
         try {
-            const response = await axios.post("http://localhost:8080/api/author/upload/profile-pic", formData,
+            const response = await axios.post("http://localhost:8082/api/author/upload/profile-pic", formData,
                 {
                     headers:
                         { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
