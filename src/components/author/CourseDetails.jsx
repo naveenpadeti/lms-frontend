@@ -17,7 +17,7 @@ const CourseDetails = () => {
 
             try {
                 let token = localStorage.getItem('token');
-                const response = await axios.get("http://localhost:8080/api/video/getAllVideos/" + params.cid, {
+                const response = await axios.get("http://localhost:8082/api/video/getAllVideos/" + params.cid, {
                     headers: { 'Authorization': 'Bearer ' + token }
                 });
                 // console.log(response);
