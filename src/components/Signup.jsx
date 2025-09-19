@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+const API_URL = 'http://localhost:8082/api';
 const Signup = () => {
     const navigate = useNavigate();
     const [msg, setMsg] = useState("");
@@ -53,7 +53,7 @@ const Signup = () => {
             console.log("Creating user with data:", user);
 
             // First create the user account
-            const userResponse = await axios.post('http://localhost:8082/api/user/signup', user);
+            const userResponse = await axios.post(`{API_URL}/user/signup`, user);
             console.log("User response:", userResponse.data);
 
             // If user is an author, add author details
@@ -70,7 +70,7 @@ const Signup = () => {
 
                 try {
                     // Updated endpoint to match the controller
-                    const authorResponse = await axios.post('http://localhost:8082/api/author/register', authorPayload);
+                    const authorResponse = await axios.post(`{API_URL}/author/register`, authorPayload);
                     console.log("Author created successfully:", authorResponse.data);
                 } catch (authorError) {
                     console.error("Full author error:", authorError);
