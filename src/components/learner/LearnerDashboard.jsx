@@ -61,7 +61,7 @@ const LearnerDashboard = () => {
 
         try {
             const response = await axios.post(
-                `http://localhost:8080/api/learner/enroll/${courseId}`,
+                `http://localhost:8082/api/learner/enroll/${courseId}`,
                 {},
                 { headers: { "Authorization": "Bearer " + token } }
             );
