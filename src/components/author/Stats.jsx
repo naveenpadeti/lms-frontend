@@ -17,7 +17,7 @@ const Stats = () => {
 
     const getStats = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/learner/course/getEnrollments", {
+        const response = await axios.get("http://localhost:8082/api/learner/course/getEnrollments", {
           headers: {
             'Authorization': "Bearer " + localStorage.getItem('token')
           }
