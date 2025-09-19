@@ -50,7 +50,7 @@ const CourseDetails = () => {
         const getReviews = async () => {
             try {
                  let token = localStorage.getItem('token');
-                const response = await axios.get("http://localhost:8080/api/review/getReviewsByCourse/" + params.cid,{
+                const response = await axios.get("http://localhost:8082/api/review/getReviewsByCourse/" + params.cid,{
                     headers: { 'Authorization': 'Bearer ' + token }
                 })
                 console.log(response);
