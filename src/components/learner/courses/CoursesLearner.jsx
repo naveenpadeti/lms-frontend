@@ -80,7 +80,7 @@ const CoursesLearner = () => {
         }
 
         try {
-            await axios.post(`http://localhost:8080/api/learner/enroll/${courseId}`, {}, {
+            await axios.post(`http://localhost:8082/api/learner/enroll/${courseId}`, {}, {
                 headers: { "Authorization": "Bearer " + token }
             });
 
