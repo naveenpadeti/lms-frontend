@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'http://localhost:8082/api';
 const Signup = () => {
     const navigate = useNavigate();
     const [msg, setMsg] = useState("");
